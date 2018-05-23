@@ -1,0 +1,1288 @@
+Lexeme analysis successfully completed.
+
+Tokens:
+4 5
+0 0
+2 59
+4 5
+0 1
+2 59
+4 5
+0 2
+2 59
+0 0
+2 61
+1 3
+2 59
+0 1
+2 61
+1 4
+2 59
+4 3
+2 40
+0 2
+3 1
+1 5
+2 41
+4 0
+2 40
+0 0
+3 0
+0 1
+2 41
+0 2
+2 61
+0 0
+2 43
+0 1
+2 59
+4 2
+0 2
+2 61
+0 0
+2 45
+0 1
+2 59
+
+Symbol table:
+a: 0 0
+b: 0 0
+c: 0 0
+2: 1 2
+1: 1 1
+10: 1 10
+
+zi;zi;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+
+I0:
+Z -> .P , $ 
+P -> .DS , $ 
+D -> .Li;D , i r w 
+D -> . , i r w 
+L -> .z , i 
+L -> .f , i 
+
+I1:
+Z -> P. , $ 
+
+I2:
+P -> D.S , $ 
+S -> .i=E , $ ; 
+S -> .r(C)S , $ ; 
+S -> .r(C)SeS , $ ; 
+S -> .w(C)S , $ ; 
+S -> .S;S , $ ; 
+S -> .S; , $ ; 
+
+I3:
+D -> L.i;D , i r w 
+
+I4:
+L -> z. , i 
+
+I5:
+L -> f. , i 
+
+I6:
+P -> DS. , $ 
+S -> S.;S , $ ; 
+S -> S.; , $ ; 
+
+I7:
+S -> i.=E , $ ; 
+
+I8:
+S -> r.(C)S , $ ; 
+S -> r.(C)SeS , $ ; 
+
+I9:
+S -> w.(C)S , $ ; 
+
+I10:
+D -> Li.;D , i r w 
+
+I11:
+S -> S;.S , $ ; 
+S -> S;. , $ ; 
+S -> .i=E , $ ; 
+S -> .r(C)S , $ ; 
+S -> .r(C)SeS , $ ; 
+S -> .w(C)S , $ ; 
+S -> .S;S , $ ; 
+S -> .S; , $ ; 
+
+I12:
+S -> i=.E , $ ; 
+E -> .E+T , $ ; + - 
+E -> .E-T , $ ; + - 
+E -> .T , $ ; + - 
+T -> .T*F , $ ; + - * / 
+T -> .T/F , $ ; + - * / 
+T -> .F , $ ; + - * / 
+F -> .(E) , $ ; + - * / 
+F -> .i , $ ; + - * / 
+F -> .n , $ ; + - * / 
+
+I13:
+S -> r(.C)S , $ ; 
+S -> r(.C)SeS , $ ; 
+C -> .EoE , ) 
+E -> .E+T , o + - 
+E -> .E-T , o + - 
+E -> .T , o + - 
+T -> .T*F , o + - * / 
+T -> .T/F , o + - * / 
+T -> .F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I14:
+S -> w(.C)S , $ ; 
+C -> .EoE , ) 
+E -> .E+T , o + - 
+E -> .E-T , o + - 
+E -> .T , o + - 
+T -> .T*F , o + - * / 
+T -> .T/F , o + - * / 
+T -> .F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I15:
+D -> Li;.D , i r w 
+D -> .Li;D , i r w 
+D -> . , i r w 
+L -> .z , i 
+L -> .f , i 
+
+I16:
+S -> S;S. , $ ; 
+S -> S.;S , $ ; 
+S -> S.; , $ ; 
+
+I17:
+F -> i. , $ ; + - * / 
+
+I18:
+S -> i=E. , $ ; 
+E -> E.+T , $ ; + - 
+E -> E.-T , $ ; + - 
+
+I19:
+F -> (.E) , $ ; + - * / 
+E -> .E+T , ) + - 
+E -> .E-T , ) + - 
+E -> .T , ) + - 
+T -> .T*F , ) + - * / 
+T -> .T/F , ) + - * / 
+T -> .F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I20:
+E -> T. , $ ; + - 
+T -> T.*F , $ ; + - * / 
+T -> T./F , $ ; + - * / 
+
+I21:
+T -> F. , $ ; + - * / 
+
+I22:
+F -> n. , $ ; + - * / 
+
+I23:
+F -> i. , o + - * / 
+
+I24:
+C -> E.oE , ) 
+E -> E.+T , o + - 
+E -> E.-T , o + - 
+
+I25:
+F -> (.E) , o + - * / 
+E -> .E+T , ) + - 
+E -> .E-T , ) + - 
+E -> .T , ) + - 
+T -> .T*F , ) + - * / 
+T -> .T/F , ) + - * / 
+T -> .F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I26:
+S -> r(C.)S , $ ; 
+S -> r(C.)SeS , $ ; 
+
+I27:
+E -> T. , o + - 
+T -> T.*F , o + - * / 
+T -> T./F , o + - * / 
+
+I28:
+T -> F. , o + - * / 
+
+I29:
+F -> n. , o + - * / 
+
+I30:
+S -> w(C.)S , $ ; 
+
+I31:
+D -> Li;D. , i r w 
+
+I32:
+E -> E+.T , $ ; + - 
+T -> .T*F , $ ; + - * / 
+T -> .T/F , $ ; + - * / 
+T -> .F , $ ; + - * / 
+F -> .(E) , $ ; + - * / 
+F -> .i , $ ; + - * / 
+F -> .n , $ ; + - * / 
+
+I33:
+E -> E-.T , $ ; + - 
+T -> .T*F , $ ; + - * / 
+T -> .T/F , $ ; + - * / 
+T -> .F , $ ; + - * / 
+F -> .(E) , $ ; + - * / 
+F -> .i , $ ; + - * / 
+F -> .n , $ ; + - * / 
+
+I34:
+F -> i. , ) + - * / 
+
+I35:
+F -> (E.) , $ ; + - * / 
+E -> E.+T , ) + - 
+E -> E.-T , ) + - 
+
+I36:
+F -> (.E) , ) + - * / 
+E -> .E+T , ) + - 
+E -> .E-T , ) + - 
+E -> .T , ) + - 
+T -> .T*F , ) + - * / 
+T -> .T/F , ) + - * / 
+T -> .F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I37:
+E -> T. , ) + - 
+T -> T.*F , ) + - * / 
+T -> T./F , ) + - * / 
+
+I38:
+T -> F. , ) + - * / 
+
+I39:
+F -> n. , ) + - * / 
+
+I40:
+T -> T*.F , $ ; + - * / 
+F -> .(E) , $ ; + - * / 
+F -> .i , $ ; + - * / 
+F -> .n , $ ; + - * / 
+
+I41:
+T -> T/.F , $ ; + - * / 
+F -> .(E) , $ ; + - * / 
+F -> .i , $ ; + - * / 
+F -> .n , $ ; + - * / 
+
+I42:
+C -> Eo.E , ) 
+E -> .E+T , ) + - 
+E -> .E-T , ) + - 
+E -> .T , ) + - 
+T -> .T*F , ) + - * / 
+T -> .T/F , ) + - * / 
+T -> .F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I43:
+E -> E+.T , o + - 
+T -> .T*F , o + - * / 
+T -> .T/F , o + - * / 
+T -> .F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I44:
+E -> E-.T , o + - 
+T -> .T*F , o + - * / 
+T -> .T/F , o + - * / 
+T -> .F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I45:
+F -> (E.) , o + - * / 
+E -> E.+T , ) + - 
+E -> E.-T , ) + - 
+
+I46:
+S -> r(C).S , $ ; 
+S -> r(C).SeS , $ ; 
+S -> .i=E , $ ; e 
+S -> .r(C)S , $ ; e 
+S -> .r(C)SeS , $ ; e 
+S -> .w(C)S , $ ; e 
+S -> .S;S , $ ; e 
+S -> .S; , $ ; e 
+
+I47:
+T -> T*.F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I48:
+T -> T/.F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I49:
+S -> w(C).S , $ ; 
+S -> .i=E , $ ; 
+S -> .r(C)S , $ ; 
+S -> .r(C)SeS , $ ; 
+S -> .w(C)S , $ ; 
+S -> .S;S , $ ; 
+S -> .S; , $ ; 
+
+I50:
+E -> E+T. , $ ; + - 
+T -> T.*F , $ ; + - * / 
+T -> T./F , $ ; + - * / 
+
+I51:
+E -> E-T. , $ ; + - 
+T -> T.*F , $ ; + - * / 
+T -> T./F , $ ; + - * / 
+
+I52:
+F -> (E). , $ ; + - * / 
+
+I53:
+E -> E+.T , ) + - 
+T -> .T*F , ) + - * / 
+T -> .T/F , ) + - * / 
+T -> .F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I54:
+E -> E-.T , ) + - 
+T -> .T*F , ) + - * / 
+T -> .T/F , ) + - * / 
+T -> .F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I55:
+F -> (E.) , ) + - * / 
+E -> E.+T , ) + - 
+E -> E.-T , ) + - 
+
+I56:
+T -> T*.F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I57:
+T -> T/.F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I58:
+T -> T*F. , $ ; + - * / 
+
+I59:
+T -> T/F. , $ ; + - * / 
+
+I60:
+C -> EoE. , ) 
+E -> E.+T , ) + - 
+E -> E.-T , ) + - 
+
+I61:
+E -> E+T. , o + - 
+T -> T.*F , o + - * / 
+T -> T./F , o + - * / 
+
+I62:
+E -> E-T. , o + - 
+T -> T.*F , o + - * / 
+T -> T./F , o + - * / 
+
+I63:
+F -> (E). , o + - * / 
+
+I64:
+S -> r(C)S. , $ ; 
+S -> r(C)S.eS , $ ; 
+S -> S.;S , $ ; e 
+S -> S.; , $ ; e 
+
+I65:
+S -> i.=E , $ ; e 
+
+I66:
+S -> r.(C)S , $ ; e 
+S -> r.(C)SeS , $ ; e 
+
+I67:
+S -> w.(C)S , $ ; e 
+
+I68:
+T -> T*F. , o + - * / 
+
+I69:
+T -> T/F. , o + - * / 
+
+I70:
+S -> w(C)S. , $ ; 
+S -> S.;S , $ ; 
+S -> S.; , $ ; 
+
+I71:
+E -> E+T. , ) + - 
+T -> T.*F , ) + - * / 
+T -> T./F , ) + - * / 
+
+I72:
+E -> E-T. , ) + - 
+T -> T.*F , ) + - * / 
+T -> T./F , ) + - * / 
+
+I73:
+F -> (E). , ) + - * / 
+
+I74:
+T -> T*F. , ) + - * / 
+
+I75:
+T -> T/F. , ) + - * / 
+
+I76:
+S -> S;.S , $ ; e 
+S -> S;. , $ ; e 
+S -> .i=E , $ ; e 
+S -> .r(C)S , $ ; e 
+S -> .r(C)SeS , $ ; e 
+S -> .w(C)S , $ ; e 
+S -> .S;S , $ ; e 
+S -> .S; , $ ; e 
+
+I77:
+S -> r(C)Se.S , $ ; 
+S -> .i=E , $ ; 
+S -> .r(C)S , $ ; 
+S -> .r(C)SeS , $ ; 
+S -> .w(C)S , $ ; 
+S -> .S;S , $ ; 
+S -> .S; , $ ; 
+
+I78:
+S -> i=.E , $ ; e 
+E -> .E+T , $ ; e + - 
+E -> .E-T , $ ; e + - 
+E -> .T , $ ; e + - 
+T -> .T*F , $ ; e + - * / 
+T -> .T/F , $ ; e + - * / 
+T -> .F , $ ; e + - * / 
+F -> .(E) , $ ; e + - * / 
+F -> .i , $ ; e + - * / 
+F -> .n , $ ; e + - * / 
+
+I79:
+S -> r(.C)S , $ ; e 
+S -> r(.C)SeS , $ ; e 
+C -> .EoE , ) 
+E -> .E+T , o + - 
+E -> .E-T , o + - 
+E -> .T , o + - 
+T -> .T*F , o + - * / 
+T -> .T/F , o + - * / 
+T -> .F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I80:
+S -> w(.C)S , $ ; e 
+C -> .EoE , ) 
+E -> .E+T , o + - 
+E -> .E-T , o + - 
+E -> .T , o + - 
+T -> .T*F , o + - * / 
+T -> .T/F , o + - * / 
+T -> .F , o + - * / 
+F -> .(E) , o + - * / 
+F -> .i , o + - * / 
+F -> .n , o + - * / 
+
+I81:
+S -> S;S. , $ ; e 
+S -> S.;S , $ ; e 
+S -> S.; , $ ; e 
+
+I82:
+S -> r(C)SeS. , $ ; 
+S -> S.;S , $ ; 
+S -> S.; , $ ; 
+
+I83:
+F -> i. , $ ; e + - * / 
+
+I84:
+S -> i=E. , $ ; e 
+E -> E.+T , $ ; e + - 
+E -> E.-T , $ ; e + - 
+
+I85:
+F -> (.E) , $ ; e + - * / 
+E -> .E+T , ) + - 
+E -> .E-T , ) + - 
+E -> .T , ) + - 
+T -> .T*F , ) + - * / 
+T -> .T/F , ) + - * / 
+T -> .F , ) + - * / 
+F -> .(E) , ) + - * / 
+F -> .i , ) + - * / 
+F -> .n , ) + - * / 
+
+I86:
+E -> T. , $ ; e + - 
+T -> T.*F , $ ; e + - * / 
+T -> T./F , $ ; e + - * / 
+
+I87:
+T -> F. , $ ; e + - * / 
+
+I88:
+F -> n. , $ ; e + - * / 
+
+I89:
+S -> r(C.)S , $ ; e 
+S -> r(C.)SeS , $ ; e 
+
+I90:
+S -> w(C.)S , $ ; e 
+
+I91:
+E -> E+.T , $ ; e + - 
+T -> .T*F , $ ; e + - * / 
+T -> .T/F , $ ; e + - * / 
+T -> .F , $ ; e + - * / 
+F -> .(E) , $ ; e + - * / 
+F -> .i , $ ; e + - * / 
+F -> .n , $ ; e + - * / 
+
+I92:
+E -> E-.T , $ ; e + - 
+T -> .T*F , $ ; e + - * / 
+T -> .T/F , $ ; e + - * / 
+T -> .F , $ ; e + - * / 
+F -> .(E) , $ ; e + - * / 
+F -> .i , $ ; e + - * / 
+F -> .n , $ ; e + - * / 
+
+I93:
+F -> (E.) , $ ; e + - * / 
+E -> E.+T , ) + - 
+E -> E.-T , ) + - 
+
+I94:
+T -> T*.F , $ ; e + - * / 
+F -> .(E) , $ ; e + - * / 
+F -> .i , $ ; e + - * / 
+F -> .n , $ ; e + - * / 
+
+I95:
+T -> T/.F , $ ; e + - * / 
+F -> .(E) , $ ; e + - * / 
+F -> .i , $ ; e + - * / 
+F -> .n , $ ; e + - * / 
+
+I96:
+S -> r(C).S , $ ; e 
+S -> r(C).SeS , $ ; e 
+S -> .i=E , $ ; e 
+S -> .r(C)S , $ ; e 
+S -> .r(C)SeS , $ ; e 
+S -> .w(C)S , $ ; e 
+S -> .S;S , $ ; e 
+S -> .S; , $ ; e 
+
+I97:
+S -> w(C).S , $ ; e 
+S -> .i=E , $ ; e 
+S -> .r(C)S , $ ; e 
+S -> .r(C)SeS , $ ; e 
+S -> .w(C)S , $ ; e 
+S -> .S;S , $ ; e 
+S -> .S; , $ ; e 
+
+I98:
+E -> E+T. , $ ; e + - 
+T -> T.*F , $ ; e + - * / 
+T -> T./F , $ ; e + - * / 
+
+I99:
+E -> E-T. , $ ; e + - 
+T -> T.*F , $ ; e + - * / 
+T -> T./F , $ ; e + - * / 
+
+I100:
+F -> (E). , $ ; e + - * / 
+
+I101:
+T -> T*F. , $ ; e + - * / 
+
+I102:
+T -> T/F. , $ ; e + - * / 
+
+I103:
+S -> r(C)S. , $ ; e 
+S -> r(C)S.eS , $ ; e 
+S -> S.;S , $ ; e 
+S -> S.; , $ ; e 
+
+I104:
+S -> w(C)S. , $ ; e 
+S -> S.;S , $ ; e 
+S -> S.; , $ ; e 
+
+I105:
+S -> r(C)Se.S , $ ; e 
+S -> .i=E , $ ; e 
+S -> .r(C)S , $ ; e 
+S -> .r(C)SeS , $ ; e 
+S -> .w(C)S , $ ; e 
+S -> .S;S , $ ; e 
+S -> .S; , $ ; e 
+
+I106:
+S -> r(C)SeS. , $ ; e 
+S -> S.;S , $ ; e 
+S -> S.; , $ ; e 
+
+
+
+Z: FIRST = { z f # i r w }, FOLLOW = { $ }; 
+$: FIRST = { $ }, FOLLOW = { }; 
+P: FIRST = { z f # i r w }, FOLLOW = { $ }; 
+D: FIRST = { z f # }, FOLLOW = { i r w }; 
+S: FIRST = { i r w }, FOLLOW = { $ e ; }; 
+L: FIRST = { z f }, FOLLOW = { i }; 
+i: FIRST = { i }, FOLLOW = { }; 
+;: FIRST = { ; }, FOLLOW = { }; 
+z: FIRST = { z }, FOLLOW = { }; 
+f: FIRST = { f }, FOLLOW = { }; 
+=: FIRST = { = }, FOLLOW = { }; 
+E: FIRST = { ( i n }, FOLLOW = { $ e ; o + - ) }; 
+r: FIRST = { r }, FOLLOW = { }; 
+(: FIRST = { ( }, FOLLOW = { }; 
+C: FIRST = { ( i n }, FOLLOW = { ) }; 
+): FIRST = { ) }, FOLLOW = { }; 
+e: FIRST = { e }, FOLLOW = { }; 
+w: FIRST = { w }, FOLLOW = { }; 
+o: FIRST = { o }, FOLLOW = { }; 
++: FIRST = { + }, FOLLOW = { }; 
+T: FIRST = { ( i n }, FOLLOW = { $ e ; o + - ) * / }; 
+-: FIRST = { - }, FOLLOW = { }; 
+*: FIRST = { * }, FOLLOW = { }; 
+F: FIRST = { ( i n }, FOLLOW = { $ e ; o + - ) * / }; 
+/: FIRST = { / }, FOLLOW = { }; 
+n: FIRST = { n }, FOLLOW = { }; 
+
+	$	i	;	z	f	=	r	(	)	e	w	o	+	-	*	/	n	P	D	S	L	E	C	T	F	
+0:		r3		s4	s5		r3				r3							1	2		3					
+1:	acc																									
+2:		s7					s8				s9									6						
+3:		s10																								
+4:		r4																								
+5:		r5																								
+6:	r1		s11																							
+7:						s12																				
+8:								s13																		
+9:								s14																		
+10:			s15																							
+11:	r11	s7	r11				s8				s9									16						
+12:		s17						s19									s22					18		20	21	
+13:		s23						s25									s29					24	26	27	28	
+14:		s23						s25									s29					24	30	27	28	
+15:		r3		s4	s5		r3				r3								31		3					
+16:	r10		s11																							
+17:	r20		r20										r20	r20	r20	r20										
+18:	r6		r6										s32	s33												
+19:		s34						s36									s39					35		37	38	
+20:	r15		r15										r15	r15	s40	s41										
+21:	r18		r18										r18	r18	r18	r18										
+22:	r21		r21										r21	r21	r21	r21										
+23:												r20	r20	r20	r20	r20										
+24:												s42	s43	s44												
+25:		s34						s36									s39					45		37	38	
+26:									s46																	
+27:												r15	r15	r15	s47	s48										
+28:												r18	r18	r18	r18	r18										
+29:												r21	r21	r21	r21	r21										
+30:									s49																	
+31:		r2					r2				r2															
+32:		s17						s19									s22							50	21	
+33:		s17						s19									s22							51	21	
+34:									r20				r20	r20	r20	r20										
+35:									s52				s53	s54												
+36:		s34						s36									s39					55		37	38	
+37:									r15				r15	r15	s56	s57										
+38:									r18				r18	r18	r18	r18										
+39:									r21				r21	r21	r21	r21										
+40:		s17						s19									s22								58	
+41:		s17						s19									s22								59	
+42:		s34						s36									s39					60		37	38	
+43:		s23						s25									s29							61	28	
+44:		s23						s25									s29							62	28	
+45:									s63				s53	s54												
+46:		s65					s66				s67									64						
+47:		s23						s25									s29								68	
+48:		s23						s25									s29								69	
+49:		s7					s8				s9									70						
+50:	r13		r13										r13	r13	s40	s41										
+51:	r14		r14										r14	r14	s40	s41										
+52:	r19		r19										r19	r19	r19	r19										
+53:		s34						s36									s39							71	38	
+54:		s34						s36									s39							72	38	
+55:									s73				s53	s54												
+56:		s34						s36									s39								74	
+57:		s34						s36									s39								75	
+58:	r16		r16										r16	r16	r16	r16										
+59:	r17		r17										r17	r17	r17	r17										
+60:									r12				s53	s54												
+61:												r13	r13	r13	s47	s48										
+62:												r14	r14	r14	s47	s48										
+63:												r19	r19	r19	r19	r19										
+64:	r7		s76							s77																
+65:						s78																				
+66:								s79																		
+67:								s80																		
+68:												r16	r16	r16	r16	r16										
+69:												r17	r17	r17	r17	r17										
+70:	r9		s11																							
+71:									r13				r13	r13	s56	s57										
+72:									r14				r14	r14	s56	s57										
+73:									r19				r19	r19	r19	r19										
+74:									r16				r16	r16	r16	r16										
+75:									r17				r17	r17	r17	r17										
+76:	r11	s65	r11				s66			r11	s67									81						
+77:		s7					s8				s9									82						
+78:		s83						s85									s88					84		86	87	
+79:		s23						s25									s29					24	89	27	28	
+80:		s23						s25									s29					24	90	27	28	
+81:	r10		s76							r10																
+82:	r8		s11																							
+83:	r20		r20							r20			r20	r20	r20	r20										
+84:	r6		r6							r6			s91	s92												
+85:		s34						s36									s39					93		37	38	
+86:	r15		r15							r15			r15	r15	s94	s95										
+87:	r18		r18							r18			r18	r18	r18	r18										
+88:	r21		r21							r21			r21	r21	r21	r21										
+89:									s96																	
+90:									s97																	
+91:		s83						s85									s88							98	87	
+92:		s83						s85									s88							99	87	
+93:									s100				s53	s54												
+94:		s83						s85									s88								101	
+95:		s83						s85									s88								102	
+96:		s65					s66				s67									103						
+97:		s65					s66				s67									104						
+98:	r13		r13							r13			r13	r13	s94	s95										
+99:	r14		r14							r14			r14	r14	s94	s95										
+100:	r19		r19							r19			r19	r19	r19	r19										
+101:	r16		r16							r16			r16	r16	r16	r16										
+102:	r17		r17							r17			r17	r17	r17	r17										
+103:	r7		s76							s105																
+104:	r9		s76							r9																
+105:		s65					s66				s67									106						
+106:	r8		s76							r8																
+
+
+State:0 
+Sign:
+Left:zi;zi;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in z
+
+State:0 4 
+Sign:z 
+Left:i;zi;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with L -> z
+
+State:0 3 
+Sign:L 
+Left:i;zi;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in i
+
+State:0 3 10 
+Sign:L i 
+Left:;zi;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in ;
+
+State:0 3 10 15 
+Sign:L i ; 
+Left:zi;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in z
+
+State:0 3 10 15 4 
+Sign:L i ; z 
+Left:i;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with L -> z
+
+State:0 3 10 15 3 
+Sign:L i ; L 
+Left:i;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in i
+
+State:0 3 10 15 3 10 
+Sign:L i ; L i 
+Left:;zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in ;
+
+State:0 3 10 15 3 10 15 
+Sign:L i ; L i ; 
+Left:zi;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in z
+
+State:0 3 10 15 3 10 15 4 
+Sign:L i ; L i ; z 
+Left:i;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with L -> z
+
+State:0 3 10 15 3 10 15 3 
+Sign:L i ; L i ; L 
+Left:i;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in i
+
+State:0 3 10 15 3 10 15 3 10 
+Sign:L i ; L i ; L i 
+Left:;i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in ;
+
+State:0 3 10 15 3 10 15 3 10 15 
+Sign:L i ; L i ; L i ; 
+Left:i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with D -> 
+
+State:0 3 10 15 3 10 15 3 10 15 31 
+Sign:L i ; L i ; L i ; D 
+Left:i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with D -> Li;D
+
+State:0 3 10 15 3 10 15 31 
+Sign:L i ; L i ; D 
+Left:i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with D -> Li;D
+
+State:0 3 10 15 31 
+Sign:L i ; D 
+Left:i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with D -> Li;D
+
+State:0 2 
+Sign:D 
+Left:i=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in i
+
+State:0 2 7 
+Sign:D i 
+Left:=n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in =
+
+State:0 2 7 12 
+Sign:D i = 
+Left:n;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in n
+
+State:0 2 7 12 22 
+Sign:D i = n 
+Left:;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with F -> n
+
+State:0 2 7 12 21 
+Sign:D i = F 
+Left:;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 7 12 20 
+Sign:D i = T 
+Left:;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with E -> T
+
+State:0 2 7 12 18 
+Sign:D i = E 
+Left:;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with S -> i=E
+
+State:0 2 6 
+Sign:D S 
+Left:;i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in ;
+
+State:0 2 6 11 
+Sign:D S ; 
+Left:i=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in i
+
+State:0 2 6 11 7 
+Sign:D S ; i 
+Left:=n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in =
+
+State:0 2 6 11 7 12 
+Sign:D S ; i = 
+Left:n;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in n
+
+State:0 2 6 11 7 12 22 
+Sign:D S ; i = n 
+Left:;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with F -> n
+
+State:0 2 6 11 7 12 21 
+Sign:D S ; i = F 
+Left:;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 6 11 7 12 20 
+Sign:D S ; i = T 
+Left:;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with E -> T
+
+State:0 2 6 11 7 12 18 
+Sign:D S ; i = E 
+Left:;w(ion)r(ioi)i=i+i;ei=i-i;$
+Reduct with S -> i=E
+
+State:0 2 6 11 16 
+Sign:D S ; S 
+Left:;w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in ;
+
+State:0 2 6 11 16 11 
+Sign:D S ; S ; 
+Left:w(ion)r(ioi)i=i+i;ei=i-i;$
+Move in w
+
+State:0 2 6 11 16 11 9 
+Sign:D S ; S ; w 
+Left:(ion)r(ioi)i=i+i;ei=i-i;$
+Move in (
+
+State:0 2 6 11 16 11 9 14 
+Sign:D S ; S ; w ( 
+Left:ion)r(ioi)i=i+i;ei=i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 23 
+Sign:D S ; S ; w ( i 
+Left:on)r(ioi)i=i+i;ei=i-i;$
+Reduct with F -> i
+
+State:0 2 6 11 16 11 9 14 28 
+Sign:D S ; S ; w ( F 
+Left:on)r(ioi)i=i+i;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 27 
+Sign:D S ; S ; w ( T 
+Left:on)r(ioi)i=i+i;ei=i-i;$
+Reduct with E -> T
+
+State:0 2 6 11 16 11 9 14 24 
+Sign:D S ; S ; w ( E 
+Left:on)r(ioi)i=i+i;ei=i-i;$
+Move in o
+
+State:0 2 6 11 16 11 9 14 24 42 
+Sign:D S ; S ; w ( E o 
+Left:n)r(ioi)i=i+i;ei=i-i;$
+Move in n
+
+State:0 2 6 11 16 11 9 14 24 42 39 
+Sign:D S ; S ; w ( E o n 
+Left:)r(ioi)i=i+i;ei=i-i;$
+Reduct with F -> n
+
+State:0 2 6 11 16 11 9 14 24 42 38 
+Sign:D S ; S ; w ( E o F 
+Left:)r(ioi)i=i+i;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 24 42 37 
+Sign:D S ; S ; w ( E o T 
+Left:)r(ioi)i=i+i;ei=i-i;$
+Reduct with E -> T
+
+State:0 2 6 11 16 11 9 14 24 42 60 
+Sign:D S ; S ; w ( E o E 
+Left:)r(ioi)i=i+i;ei=i-i;$
+Reduct with C -> EoE
+
+State:0 2 6 11 16 11 9 14 30 
+Sign:D S ; S ; w ( C 
+Left:)r(ioi)i=i+i;ei=i-i;$
+Move in )
+
+State:0 2 6 11 16 11 9 14 30 49 
+Sign:D S ; S ; w ( C ) 
+Left:r(ioi)i=i+i;ei=i-i;$
+Move in r
+
+State:0 2 6 11 16 11 9 14 30 49 8 
+Sign:D S ; S ; w ( C ) r 
+Left:(ioi)i=i+i;ei=i-i;$
+Move in (
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 
+Sign:D S ; S ; w ( C ) r ( 
+Left:ioi)i=i+i;ei=i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 23 
+Sign:D S ; S ; w ( C ) r ( i 
+Left:oi)i=i+i;ei=i-i;$
+Reduct with F -> i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 28 
+Sign:D S ; S ; w ( C ) r ( F 
+Left:oi)i=i+i;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 27 
+Sign:D S ; S ; w ( C ) r ( T 
+Left:oi)i=i+i;ei=i-i;$
+Reduct with E -> T
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 24 
+Sign:D S ; S ; w ( C ) r ( E 
+Left:oi)i=i+i;ei=i-i;$
+Move in o
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 24 42 
+Sign:D S ; S ; w ( C ) r ( E o 
+Left:i)i=i+i;ei=i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 24 42 34 
+Sign:D S ; S ; w ( C ) r ( E o i 
+Left:)i=i+i;ei=i-i;$
+Reduct with F -> i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 24 42 38 
+Sign:D S ; S ; w ( C ) r ( E o F 
+Left:)i=i+i;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 24 42 37 
+Sign:D S ; S ; w ( C ) r ( E o T 
+Left:)i=i+i;ei=i-i;$
+Reduct with E -> T
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 24 42 60 
+Sign:D S ; S ; w ( C ) r ( E o E 
+Left:)i=i+i;ei=i-i;$
+Reduct with C -> EoE
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 
+Sign:D S ; S ; w ( C ) r ( C 
+Left:)i=i+i;ei=i-i;$
+Move in )
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 
+Sign:D S ; S ; w ( C ) r ( C ) 
+Left:i=i+i;ei=i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 
+Sign:D S ; S ; w ( C ) r ( C ) i 
+Left:=i+i;ei=i-i;$
+Move in =
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 
+Sign:D S ; S ; w ( C ) r ( C ) i = 
+Left:i+i;ei=i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 83 
+Sign:D S ; S ; w ( C ) r ( C ) i = i 
+Left:+i;ei=i-i;$
+Reduct with F -> i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 87 
+Sign:D S ; S ; w ( C ) r ( C ) i = F 
+Left:+i;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 86 
+Sign:D S ; S ; w ( C ) r ( C ) i = T 
+Left:+i;ei=i-i;$
+Reduct with E -> T
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 84 
+Sign:D S ; S ; w ( C ) r ( C ) i = E 
+Left:+i;ei=i-i;$
+Move in +
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 84 91 
+Sign:D S ; S ; w ( C ) r ( C ) i = E + 
+Left:i;ei=i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 84 91 83 
+Sign:D S ; S ; w ( C ) r ( C ) i = E + i 
+Left:;ei=i-i;$
+Reduct with F -> i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 84 91 87 
+Sign:D S ; S ; w ( C ) r ( C ) i = E + F 
+Left:;ei=i-i;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 84 91 98 
+Sign:D S ; S ; w ( C ) r ( C ) i = E + T 
+Left:;ei=i-i;$
+Reduct with E -> E+T
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 65 78 84 
+Sign:D S ; S ; w ( C ) r ( C ) i = E 
+Left:;ei=i-i;$
+Reduct with S -> i=E
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 
+Sign:D S ; S ; w ( C ) r ( C ) S 
+Left:;ei=i-i;$
+Move in ;
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 76 
+Sign:D S ; S ; w ( C ) r ( C ) S ; 
+Left:ei=i-i;$
+Reduct with S -> S;
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 
+Sign:D S ; S ; w ( C ) r ( C ) S 
+Left:ei=i-i;$
+Move in e
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 
+Sign:D S ; S ; w ( C ) r ( C ) S e 
+Left:i=i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 
+Sign:D S ; S ; w ( C ) r ( C ) S e i 
+Left:=i-i;$
+Move in =
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = 
+Left:i-i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 17 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = i 
+Left:-i;$
+Reduct with F -> i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 21 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = F 
+Left:-i;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 20 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = T 
+Left:-i;$
+Reduct with E -> T
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 18 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = E 
+Left:-i;$
+Move in -
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 18 33 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = E - 
+Left:i;$
+Move in i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 18 33 17 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = E - i 
+Left:;$
+Reduct with F -> i
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 18 33 21 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = E - F 
+Left:;$
+Reduct with T -> F
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 18 33 51 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = E - T 
+Left:;$
+Reduct with E -> E-T
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 7 12 18 
+Sign:D S ; S ; w ( C ) r ( C ) S e i = E 
+Left:;$
+Reduct with S -> i=E
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 82 
+Sign:D S ; S ; w ( C ) r ( C ) S e S 
+Left:;$
+Move in ;
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 82 11 
+Sign:D S ; S ; w ( C ) r ( C ) S e S ; 
+Left:$
+Reduct with S -> S;
+
+State:0 2 6 11 16 11 9 14 30 49 8 13 26 46 64 77 82 
+Sign:D S ; S ; w ( C ) r ( C ) S e S 
+Left:$
+Reduct with S -> r(C)SeS
+
+State:0 2 6 11 16 11 9 14 30 49 70 
+Sign:D S ; S ; w ( C ) S 
+Left:$
+Reduct with S -> w(C)S
+
+State:0 2 6 11 16 11 16 
+Sign:D S ; S ; S 
+Left:$
+Reduct with S -> S;S
+
+State:0 2 6 11 16 
+Sign:D S ; S 
+Left:$
+Reduct with S -> S;S
+
+State:0 2 6 
+Sign:D S 
+Left:$
+Reduct with P -> DS
+
+State:0 1 
+Sign:P 
+Left:$
+Accepted.

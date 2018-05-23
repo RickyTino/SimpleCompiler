@@ -1,0 +1,35 @@
+rop     o
+op      ASCII(op)
+id	    i
+intg    n
+
+if	    r
+then	t
+else	e
+while	w
+do	    d
+int	    z
+float	f
+
+P -> DS
+D -> Li;D
+D ->
+L -> z
+L -> f
+
+S -> i=E
+S -> r(C)S
+S -> r(C)SeS
+S -> w(C)S
+S -> S;S
+S -> S;
+C -> EoE
+E -> E+T
+E -> E-T
+E -> T
+T -> F
+T -> T*F
+T -> T/F
+F -> (E)
+F -> i
+F -> n

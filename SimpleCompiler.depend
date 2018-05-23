@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1525241855 source:d:\c&c++_projects\编译原理实验\simplecompiler\gramanalyse.cpp
+	"Compiler.h"
+
+1525244753 d:\c&c++_projects\编译原理实验\simplecompiler\compiler.h
+	<bits/stdc++.h>
+	<conio.h>
+
+1525225633 source:d:\c&c++_projects\编译原理实验\simplecompiler\lexanalyse.cpp
+	"Compiler.h"
+
+1525244753 source:d:\c&c++_projects\编译原理实验\simplecompiler\main.cpp
+	"Compiler.h"
+
